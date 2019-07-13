@@ -5,6 +5,9 @@ import android.os.Handler
 import com.rebtel.country.R
 import com.rebtel.country.base.BaseActivity
 
+/**
+ * SplashActivity
+ */
 class SplashActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

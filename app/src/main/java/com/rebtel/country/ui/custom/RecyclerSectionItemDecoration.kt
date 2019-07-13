@@ -9,6 +9,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.rebtel.country.R
 
+/**
+ * Recycler section decoration
+ * @param headerOffset
+ * @param sectionCallback
+ * @param sticky
+ */
 class RecyclerSectionItemDecoration(private val headerOffset: Int, private val sticky: Boolean, private val sectionCallback: SectionCallback) : RecyclerView.ItemDecoration() {
 
     private var headerView: View? = null
@@ -84,6 +90,9 @@ class RecyclerSectionItemDecoration(private val headerOffset: Int, private val s
         view.layout(0, 0, view.measuredWidth, view.measuredHeight)
     }
 
+    /**
+     * section call backs
+     */
     interface SectionCallback {
 
         fun isSection(position: Int): Boolean

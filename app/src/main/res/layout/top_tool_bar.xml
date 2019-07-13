@@ -24,8 +24,10 @@
                     <ImageView
                             android:id="@+id/iv_top_tool_bar"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:padding="@dimen/padding_16dp"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/padding_20dp"
+                            android:paddingBottom="@dimen/padding_20dp"
+                            android:paddingRight="@dimen/padding_20dp"
                             android:layout_centerInParent="true"
                             android:layout_alignParentLeft="true"
                             android:tint="@color/white"

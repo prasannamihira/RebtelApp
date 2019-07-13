@@ -11,6 +11,12 @@ import java.io.InputStream;
 public class SvgUtils {
     private static OkHttpClient httpClient;
 
+    /**
+     * fetch svg by given web url to target imageview layout
+     * @param context
+     * @param url
+     * @param target
+     */
     public static void fetchSvg(Context context, String url, final ImageView target) {
         if (httpClient == null) {
             // Use cache for performance and basic offline capability
@@ -23,7 +29,7 @@ public class SvgUtils {
         httpClient.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-//                target.setImageDrawable(R.drawable.fallback_image);
+
             }
 
             @Override

@@ -8,5 +8,5 @@
           android:clickable="true"
           android:focusableInTouchMode="true"
           android:textColor="@color/colorGoogleButton"
-          android:textSize="24sp"
+          android:textSize="@dimen/text_24sp"
           android:focusable="true" />

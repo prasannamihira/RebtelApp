@@ -15,6 +15,7 @@ import com.rebtel.country.databinding.ActivityCountryListBinding
 import com.rebtel.country.ui.country.detail.CountryDetailActivity
 import com.rebtel.country.ui.custom.RecyclerSectionItemDecoration
 import com.rebtel.country.util.Config
+import com.rebtel.country.util.isInternetOn
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -48,7 +49,28 @@ class CountryListActivity : BaseActivity(), AlphabeticalAdapter.OnItemClickListe
 
         App.appComponent.inject(this)
 
-        fetchAllCountries()
+        // check the device internet is connected
+        if(isInternetOn()) {
+            fetchAllCountries()
+        } else {
+            showToast(getStringFromResourceId(this, R.string.error_enable_internet))
+        }
+    }
+
+    override fun onBackPressed() {
+        if (supportFragmentManager.backStackEntryCount === 0) {
+            AlertDialog.Builder(this)
+                .setTitle(getStringFromResourceId(this, R.string.msg_quite))
+                .setMessage(getStringFromResourceId(this, R.string.msg_exit))
+                .setNegativeButton("NO", null)
+                .setPositiveButton("YES") { dialogInterface, i ->
+                    dialogInterface.dismiss()
+                    super.onBackPressed()
+                }
+                .show()
+        } else {
+            super.onBackPressed()
+        }
     }
 
     /**

@@ -1,9 +1,11 @@
 package com.rebtel.country.base
 
+import android.content.Context
 import android.content.Intent
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -84,6 +86,7 @@ open class BaseActivity : AppCompatActivity() {
      */
     fun startCountryListActivity() {
         val intent = Intent(this, CountryListActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         startActivity(intent)
     }
 
@@ -111,5 +114,16 @@ open class BaseActivity : AppCompatActivity() {
         )
         view?.addItemDecoration(dividerItemDecoration)
     }
+
+    /**
+     * get string value from string resource id
+     *
+     * @param resId
+     * @return
+     */
+    fun getStringFromResourceId(context: Context, resId: Int): String {
+        return context.resources.getString(resId)
+    }
+
 
 }
