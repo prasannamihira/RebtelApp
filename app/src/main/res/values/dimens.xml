@@ -2,10 +2,7 @@
 <resources>
 
     <!--text-->
-    <dimen name="text_15sp">15sp</dimen>
     <dimen name="text_14sp">14sp</dimen>
-    <dimen name="text_16sp">16sp</dimen>
-    <dimen name="text_12sp">12sp</dimen>
     <dimen name="text_22sp">22sp</dimen>
     <dimen name="text_24sp">24sp</dimen>
 
@@ -14,20 +11,10 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <dimen name="padding_0dp">0dp</dimen>
-    <dimen name="padding_5dp">5dp</dimen>
-    <dimen name="padding_6dp">6dp</dimen>
     <dimen name="padding_8dp">8dp</dimen>
-    <dimen name="padding_10dp">10dp</dimen>
     <dimen name="padding_16dp">16dp</dimen>
     <dimen name="padding_20dp">20dp</dimen>
     <dimen name="padding_24dp">24dp</dimen>
     <dimen name="padding_30dp">30dp</dimen>
-    <dimen name="padding_36dp">36dp</dimen>
-    <dimen name="padding_38dp">38dp</dimen>
-    <dimen name="padding_46dp">46dp</dimen>
-    <dimen name="padding_56dp">56dp</dimen>
-    <dimen name="padding_64dp">64dp</dimen>
-    <dimen name="padding_76dp">76dp</dimen>
-    <dimen name="padding_130dp">130dp</dimen>
 
 </resources>
