@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/list_item_section_text"
+          android:layout_width="55dp"
+          android:layout_height="@dimen/padding_30dp"
+          android:paddingRight="@dimen/activity_horizontal_margin"
+          android:paddingLeft="@dimen/activity_horizontal_margin"
+          android:clickable="true"
+          android:focusableInTouchMode="true"
+          android:textColor="@color/colorGoogleButton"
+          android:textSize="24sp"
+          android:focusable="true" />
