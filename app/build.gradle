@@ -1,0 +1,150 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.rebtel.country"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.0" // dev 1
+//        versionName "1.0." // prod 0
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+        buildConfigField "String", "BASE_URL", '"https://restcountries.eu/rest/v2/"'
+
+        resValue "string", "app_name", "Rebtel"
+    }
+    buildTypes {
+        dev {
+            minifyEnabled false
+            debuggable true
+            signingConfig signingConfigs.debug
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+            resValue "string", "app_name", "Rebtel(DEV)"
+            buildConfigField "String", "BASE_URL", '"https://restcountries.eu/rest/v2/"'
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher_dev"
+            ]
+        }
+        release {
+            minifyEnabled false
+            applicationIdSuffix ".prod"
+            versionNameSuffix "-prod"
+//             signingConfig signingConfigs.release
+            resValue "string", "app_name", "Rebtel"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BASE_URL", '"https://restcountries.eu/rest/v2/"'
+
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher"
+            ]
+        }
+    }
+    dataBinding {
+        enabled true
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs = ['src/test/kotlin']
+        androidTest.java.srcDirs = ['src/androidTest/kotlin']
+    }
+}
+configurations.all {
+    // OkHttp 3.5.0+ includes the websockets API, so we need this to prevent a conflict
+    exclude module: 'okhttp-ws'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.3.31'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:support-compat:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:design:28.0.0'
+
+    // LiveData & ViewModel
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+
+    //Rx
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.15'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex:rxkotlin:0.60.0'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.4.0'
+
+    // Dagger 2
+    implementation 'com.google.dagger:dagger:2.17'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    kapt "com.google.dagger:dagger-compiler:2.17"
+    compileOnly 'org.glassfish:javax.annotation:3.1.1'
+    kapt "com.google.dagger:dagger-compiler:2.17"
+
+    // network
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+    // RecyclerView
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+
+    // Cache image loading
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
+    implementation 'com.caverock:androidsvg-aar:1.4'
+    implementation 'com.github.bumptech.glide:glide:4.0.0-RC1'
+
+    //svg
+    implementation 'com.pixplicity.sharp:library:1.1.0'
+
+    // Logging
+    implementation 'com.jakewharton.timber:timber:4.5.1'
+
+    // fast scrolling
+    implementation 'com.l4digital.fastscroll:fastscroll:1.0.4'
+    implementation 'org.apache.commons:commons-lang3:3.4'
+    implementation 'com.android.support:palette-v7:28.0.0'
+
+    //phone number validation
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.3.2'
+
+    //crashlatics
+    implementation('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
+        transitive = true
+    }
+
+    // FirebaseAnalytics
+    implementation 'com.google.firebase:firebase-core:17.0.0'
+
+    // leak
+    implementation 'com.squareup.leakcanary:leakcanary-android:1.6.2'
+
+    // test
+    implementation 'junit:junit:4.12'
+    implementation 'org.mockito:mockito-core:2.18.3'
+    implementation 'org.mockito:mockito-inline:2.16.0'
+    implementation 'com.squareup.okhttp3:mockwebserver:3.2.0'
+    implementation 'com.android.support:support-annotations:28.0.0'
+    implementation 'com.android.support.test:runner:1.0.2'
+    implementation 'com.android.support.test:rules:1.0.2'
+    implementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation('com.android.support.test.espresso:espresso-contrib:3.0.2') {
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'design'
+        exclude group: 'com.android.support', module: 'recyclerview-v7'
+    }
+}
