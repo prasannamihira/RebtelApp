@@ -17,7 +17,7 @@ import com.rebtel.country.ui.custom.RecyclerSectionItemDecoration
 import io.reactivex.disposables.CompositeDisposable
 import java.net.ConnectException
 
-open class BaseActivity: AppCompatActivity() {
+open class BaseActivity : AppCompatActivity() {
 
     val subscription = CompositeDisposable()
 
@@ -34,27 +34,40 @@ open class BaseActivity: AppCompatActivity() {
             view.visibility = View.INVISIBLE
     }
 
+    /**
+     * handle network error with toast message
+     * @param e // exception throwable
+     */
+
     fun handleNetworkError(e: Throwable) {
         e.printStackTrace()
         if (e is ConnectException) {
-            showToast("Please connect to Internet")
+            showToast(resources.getString(R.string.error_connect_internet))
         } else {
-            showToast("Please try again")
+            showToast(resources.getString(R.string.error_try_again))
         }
     }
 
-    fun getSectionCallback(people: List<ListRow>): RecyclerSectionItemDecoration.SectionCallback {
+    /**
+     * call bak of section of list row
+     * @param country
+     */
+    fun getSectionCallback(country: List<ListRow>): RecyclerSectionItemDecoration.SectionCallback {
         return object : RecyclerSectionItemDecoration.SectionCallback {
             override fun isSection(position: Int): Boolean {
-                return people[position].isHeader
+                return country[position].isHeader
             }
 
             override fun getSectionHeader(position: Int): CharSequence {
-                return people[position].char.toString()
+                return country[position].char.toString()
             }
         }
     }
 
+    /**
+     * show toast message with given text
+     * @param msg // message to show
+     */
     fun showToast(msg: String) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
@@ -66,24 +79,27 @@ open class BaseActivity: AppCompatActivity() {
         subscription.clear()
     }
 
-    // navigate to country list screen
+    /**
+     * navigate to country list screen
+     */
     fun startCountryListActivity() {
         val intent = Intent(this, CountryListActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         startActivity(intent)
     }
 
-    // navigate to country details screen
+    /**
+     * navigate to country details screen
+     */
     fun startCountryDetailsActivity() {
         val intent = Intent(this, CountryDetailActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         startActivity(intent)
     }
 
     /**
      * set divider item decoration for given fast scroll recycler view
+     * @param view // scroll view
      */
-    fun setDividerItemDecoration(view:FastScrollRecyclerView?) {
+    fun setDividerItemDecoration(view: FastScrollRecyclerView?) {
         var dividerItemDecoration = DividerItemDecoration(
             view?.context,
             LinearLayoutManager(this).orientation

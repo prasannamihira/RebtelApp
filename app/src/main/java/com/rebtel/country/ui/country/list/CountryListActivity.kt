@@ -21,6 +21,9 @@ import io.reactivex.schedulers.Schedulers
 import timber.log.Timber
 import javax.inject.Inject
 
+/**
+ * CountryListActivity for list countries with alphabetical scroll view
+ */
 class CountryListActivity : BaseActivity(), AlphabeticalAdapter.OnItemClickListener {
 
     @Inject
@@ -30,7 +33,7 @@ class CountryListActivity : BaseActivity(), AlphabeticalAdapter.OnItemClickListe
 
     override fun onItemClicked(listRow: ListRow) {
         var intent = Intent(this, CountryDetailActivity::class.java)
-//        intent.putExtra(Config.EXTRA_LIST_ROW, listRow.item)
+
         CountryDetailActivity.itemCountry = listRow.item
         startActivity(intent)
     }
@@ -69,8 +72,10 @@ class CountryListActivity : BaseActivity(), AlphabeticalAdapter.OnItemClickListe
                             Timber.d("Maintenance requests data received")
                             dataCountryList = countryListVM.dataCountryList!!
 
-                            if (countryListVM.dataRetrieved && dataCountryList != null && dataCountryList.isNotEmpty()) {
+                            // check the country list data available
+                            if (countryListVM.dataRetrieved && dataCountryList.isNotEmpty()) {
 
+                                // sort country list by using alpha code
                                 var list = dataCountryList.sortedWith(compareBy({ it.alpha2Code }, { it.name?.trim() }))
                                 sortByAlphabetic(list)
 
@@ -88,7 +93,7 @@ class CountryListActivity : BaseActivity(), AlphabeticalAdapter.OnItemClickListe
                                 // no data retrieved, then display empty data message
                                 this?.runOnUiThread {
                                     var builder = AlertDialog.Builder(this)
-                                        .setMessage("No countries available to display")
+                                        .setMessage(resources.getString(R.string.error_empty_countries))
                                         .setPositiveButton("OK") { dialogInterface, i -> dialogInterface.dismiss() }
                                     var dialog: AlertDialog = builder.create()
                                     dialog.show()
@@ -100,7 +105,7 @@ class CountryListActivity : BaseActivity(), AlphabeticalAdapter.OnItemClickListe
                             // server error, then display error message
                             this?.runOnUiThread {
                                 var builder = AlertDialog.Builder(this)
-                                    .setMessage("We’re having a problem with that, please try again")
+                                    .setMessage(resources.getString(R.string.error_problem_request))
                                     .setPositiveButton("OK") { dialogInterface, i -> dialogInterface.dismiss() }
                                 var dialog: AlertDialog = builder.create()
                                 dialog.show()
@@ -115,6 +120,10 @@ class CountryListActivity : BaseActivity(), AlphabeticalAdapter.OnItemClickListe
     }
 
     private val listRow = ArrayList<ListRow>()
+    /**
+     * sort the list of countries by first letter of country code
+     * @param list // country list
+     */
     private fun sortByAlphabetic(list: List<CountryResponseDataModel>) {
         var lastKey = ""
         subscription.add(
@@ -130,7 +139,6 @@ class CountryListActivity : BaseActivity(), AlphabeticalAdapter.OnItemClickListe
                     } else {
                         notNullName!![0].toUpperCase()
                     }
-
                 }
                 .doOnSubscribe { showProgress(mBinding!!.pbCountryList, true) }
                 .doOnTerminate { showProgress(mBinding!!.pbCountryList, false) }
@@ -145,12 +153,11 @@ class CountryListActivity : BaseActivity(), AlphabeticalAdapter.OnItemClickListe
                         listRow.add(row)
                         lastKey = group.key.toString()
                     }
-
                 }.doOnComplete {
-
+                    // set alphabetical adapter on country list
                     val adapter = AlphabeticalAdapter(listRow)
                     adapter.onItemClickListener = this@CountryListActivity
-                    mBinding?.rvCountry?.setAdapter(adapter)
+                    mBinding?.rvCountry?.adapter = adapter
 
                     val sectionItemDecoration = RecyclerSectionItemDecoration(
                         resources.getDimensionPixelSize(R.dimen.padding_30dp),

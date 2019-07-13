@@ -12,14 +12,16 @@ import com.rebtel.country.base.BaseActivity
 import com.rebtel.country.data.model.CountryResponseDataModel
 import com.rebtel.country.databinding.ActivityCountryDetailBinding
 import com.rebtel.country.util.svg.SvgUtils
-import kotlinx.android.synthetic.main.list_item_country.view.*
 
-
+/**
+ * CountryDetailActivity for show details of selected country
+ */
 class CountryDetailActivity : BaseActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
 
         when (v?.id) {
+            // tool bar back button click
             R.id.iv_top_tool_bar -> {
                 finish()
             }
@@ -42,6 +44,9 @@ class CountryDetailActivity : BaseActivity(), View.OnClickListener {
         updateUI()
     }
 
+    /**
+     * update ui according to the country details
+     */
     private fun updateUI() {
         mBinding?.tvCountryCapital?.text = itemCountry.capital
         mBinding?.tvCountryNativeName?.text = itemCountry.nativeName
@@ -55,7 +60,7 @@ class CountryDetailActivity : BaseActivity(), View.OnClickListener {
         mBinding?.tvCountryCurrency?.text = currency
         mBinding?.tvCountryTimezone?.text = itemCountry.timezones?.get(0)
 
-
+        // setup svg image from web url with imageview layout
         SvgUtils.fetchSvg(this, itemCountry.flag, mBinding?.ivCountryFlag)
 
         // set image corner radius
@@ -70,11 +75,7 @@ class CountryDetailActivity : BaseActivity(), View.OnClickListener {
                     outline?.setRoundRect(0, 0, view!!.width, view?.height, curveRadius)
                 }
             }
-
             mBinding?.ivCountryFlag?.clipToOutline = true
-
         }
-
-
     }
 }

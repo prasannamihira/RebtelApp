@@ -70,12 +70,16 @@ class AlphabeticalAdapter(var items: List<ListRow>) : RecyclerView.Adapter<Alpha
                         outline?.setRoundRect(0, 0, view!!.width, view?.height, curveRadius)
                     }
                 }
-
                 holder!!.itemView.iv_item_flag.clipToOutline = true
             }
         }
     }
 
+    /**
+     * get drawable from resources by given name
+     * @param context
+     * @param name
+     */
     private fun getDrawableByName(context: Context, name: String?): Drawable? {
         try {
             val resources = context.resources
@@ -113,6 +117,7 @@ class AlphabeticalAdapter(var items: List<ListRow>) : RecyclerView.Adapter<Alpha
     inner class ViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder(parent.inflate(R.layout.list_item_country)) {
         fun setOnItemClickListener(onItemClickListener: OnItemClickListener?) {
 
+            // set listener on item click
             itemView.setOnClickListener {
                 if (onItemClickListener != null) {
                     onItemClickListener.onItemClicked(items[adapterPosition])
@@ -124,6 +129,4 @@ class AlphabeticalAdapter(var items: List<ListRow>) : RecyclerView.Adapter<Alpha
     fun getItem(pos: Int): ListRow {
         return items[pos]
     }
-
-
 }

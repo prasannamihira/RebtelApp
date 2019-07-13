@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_empty_countries">No countries available to display</string>
+    <string name="error_problem_request">We’re having a problem with that, please try again</string>
+    <string name="error_connect_internet">Please connect to Internet</string>
+    <string name="error_try_again">Please try again</string>
+</resources>

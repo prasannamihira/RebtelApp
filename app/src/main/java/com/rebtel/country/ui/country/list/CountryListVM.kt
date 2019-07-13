@@ -17,8 +17,8 @@ class CountryListVM @Inject constructor(
     private val SIZE = 1000
     private var x = 0
     private var y = 0
-    val letters =
-        arrayListOf<String>("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R")
+    private val letters =
+        arrayListOf("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R")
 
     init {
         x = 0
@@ -38,7 +38,7 @@ class CountryListVM @Inject constructor(
     }
 
     var dataRetrieved: Boolean = false
-    lateinit var dataCountryList: List<CountryResponseDataModel>
+    var dataCountryList: List<CountryResponseDataModel>? =  null
 
     /**
      * fetch all countries
@@ -50,8 +50,6 @@ class CountryListVM @Inject constructor(
                     dataCountryList = it.body()!!
 
                     dataRetrieved = true
-                } else {
-
                 }
             }
 }
