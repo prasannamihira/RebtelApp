@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.caverock:androidsvg-aar:1.4@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bf70f547dbbd878b04a5035f3870932c/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bf70f547dbbd878b04a5035f3870932c/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.caverock/androidsvg-aar/1.4/1f123ca75149c7fae851379b02cd1c5a25429399/androidsvg-aar-1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
