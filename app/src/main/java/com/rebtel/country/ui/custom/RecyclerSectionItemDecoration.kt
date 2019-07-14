@@ -15,7 +15,11 @@ import com.rebtel.country.R
  * @param sectionCallback
  * @param sticky
  */
-class RecyclerSectionItemDecoration(private val headerOffset: Int, private val sticky: Boolean, private val sectionCallback: SectionCallback) : RecyclerView.ItemDecoration() {
+class RecyclerSectionItemDecoration(
+    private val headerOffset: Int,
+    private val sticky: Boolean,
+    private val sectionCallback: SectionCallback
+) : RecyclerView.ItemDecoration() {
 
     private var headerView: View? = null
     private var header: TextView? = null
@@ -73,17 +77,25 @@ class RecyclerSectionItemDecoration(private val headerOffset: Int, private val s
      * https://yoda.entelect.co.za/view/9627/how-to-android-recyclerview-item-decorations
      */
     private fun fixLayoutSize(view: View, parent: ViewGroup) {
-        val widthSpec = View.MeasureSpec.makeMeasureSpec(parent.width,
-            View.MeasureSpec.EXACTLY)
-        val heightSpec = View.MeasureSpec.makeMeasureSpec(parent.height,
-            View.MeasureSpec.UNSPECIFIED)
+        val widthSpec = View.MeasureSpec.makeMeasureSpec(
+            parent.width,
+            View.MeasureSpec.EXACTLY
+        )
+        val heightSpec = View.MeasureSpec.makeMeasureSpec(
+            parent.height,
+            View.MeasureSpec.UNSPECIFIED
+        )
 
-        val childWidth = ViewGroup.getChildMeasureSpec(widthSpec,
+        val childWidth = ViewGroup.getChildMeasureSpec(
+            widthSpec,
             parent.paddingLeft + parent.paddingRight,
-            view.layoutParams.width)
-        val childHeight = ViewGroup.getChildMeasureSpec(heightSpec,
+            view.layoutParams.width
+        )
+        val childHeight = ViewGroup.getChildMeasureSpec(
+            heightSpec,
             parent.paddingTop + parent.paddingBottom,
-            view.layoutParams.height)
+            view.layoutParams.height
+        )
 
         view.measure(childWidth, childHeight)
 
