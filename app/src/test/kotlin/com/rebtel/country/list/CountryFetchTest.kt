@@ -11,7 +11,6 @@ import org.mockito.Mock
 import org.mockito.MockitoAnnotations
 import retrofit2.Response
 import rx.observers.TestSubscriber
-import javax.inject.Inject
 
 class CountryFetchTest {
 
