@@ -1,6 +1,7 @@
 package com.rebtel.country.di
 
 import com.rebtel.country.app.App
+import com.rebtel.country.data.local.LocalDataSource
 import com.rebtel.country.ui.country.list.CountryListActivity
 import dagger.Component
 import javax.inject.Singleton

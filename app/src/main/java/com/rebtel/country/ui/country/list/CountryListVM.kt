@@ -3,14 +3,13 @@ package com.rebtel.country.ui.country.list
 import android.content.SharedPreferences
 import com.rebtel.country.data.model.CountryResponseDataModel
 import com.rebtel.country.network.ApiService
+import io.reactivex.Flowable
 import javax.inject.Inject
 
 class CountryListVM @Inject constructor(
-    private val sharedPreferences: SharedPreferences,
+    private val sharedPref: SharedPreferences,
     private val apiService: ApiService
 ) {
-
-    val results: ArrayList<String> = ArrayList()
 
     var items: ArrayList<String>
 
@@ -38,12 +37,12 @@ class CountryListVM @Inject constructor(
     }
 
     var dataRetrieved: Boolean = false
-    var dataCountryList: List<CountryResponseDataModel>? =  null
+    var dataCountryList: List<CountryResponseDataModel>? = null
 
     /**
      * fetch all countries
      */
-    fun fetchAllCountries() =
+    fun fetchAllCountries(): Flowable<Unit> =
         apiService.getAllCountries()
             .map {
                 if (it.isSuccessful) {

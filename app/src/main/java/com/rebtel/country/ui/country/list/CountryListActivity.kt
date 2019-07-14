@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.rebtel.country.R
 import com.rebtel.country.app.App
 import com.rebtel.country.base.BaseActivity
+import com.rebtel.country.data.local.LocalDataSource
 import com.rebtel.country.data.model.CountryResponseDataModel
 import com.rebtel.country.data.model.ListRow
 import com.rebtel.country.databinding.ActivityCountryListBinding
@@ -42,12 +43,13 @@ class CountryListActivity : BaseActivity(), AlphabeticalAdapter.OnItemClickListe
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        App.appComponent.inject(this)
+
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_country_list)
 
         mBinding?.topToolBar?.tvTopToolBar?.text = resources.getString(R.string.title_countries)
         mBinding?.topToolBar?.ivTopToolBar?.visibility = View.INVISIBLE
 
-        App.appComponent.inject(this)
 
         // check the device internet is connected
         if(isInternetOn()) {
@@ -57,6 +59,10 @@ class CountryListActivity : BaseActivity(), AlphabeticalAdapter.OnItemClickListe
         }
     }
 
+    /**
+     * back press when confirm exit
+     * clear all local data
+     */
     override fun onBackPressed() {
         if (supportFragmentManager.backStackEntryCount === 0) {
             AlertDialog.Builder(this)
@@ -66,6 +72,8 @@ class CountryListActivity : BaseActivity(), AlphabeticalAdapter.OnItemClickListe
                 .setPositiveButton("YES") { dialogInterface, i ->
                     dialogInterface.dismiss()
                     super.onBackPressed()
+                    LocalDataSource(this).logOut()
+
                 }
                 .show()
         } else {
