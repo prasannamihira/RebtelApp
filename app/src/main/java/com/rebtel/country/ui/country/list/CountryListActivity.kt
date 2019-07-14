@@ -20,6 +20,7 @@ import com.rebtel.country.util.isInternetOn
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import kotlinx.android.synthetic.main.list_item_country.*
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -106,7 +107,7 @@ class CountryListActivity : BaseActivity(), AlphabeticalAdapter.OnItemClickListe
                             if (countryListVM.dataRetrieved && dataCountryList.isNotEmpty()) {
 
                                 // sort country list by using alpha code
-                                var list = dataCountryList.sortedWith(compareBy({ it.alpha2Code }, { it.name?.trim() }))
+                                var list = dataCountryList.sortedWith(compareBy({ it.alpha3Code?.trim() }, { it.alpha2Code }, { it.name }))
                                 sortByAlphabetic(list)
 
                                 var adapter = CountryListAdapter(
@@ -143,6 +144,7 @@ class CountryListActivity : BaseActivity(), AlphabeticalAdapter.OnItemClickListe
                         }
                     },
                     {
+                        showProgress(mBinding!!.pbCountryList, false)
                         handleNetworkError(it)
                     }
                 )

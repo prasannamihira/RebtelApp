@@ -27,7 +27,7 @@ class CountryFetchTest {
     @Mock
     lateinit var localDataSource: LocalDataSource
 
-    @Inject
+    @Mock
     lateinit var countryListVM: CountryListVM
 
     private var testSubscriber: TestSubscriber<Response<CountryResponseDataModel>>? = null
