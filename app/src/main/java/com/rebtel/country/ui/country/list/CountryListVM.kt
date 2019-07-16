@@ -1,15 +1,20 @@
 package com.rebtel.country.ui.country.list
 
 import android.content.SharedPreferences
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.rebtel.country.data.model.CountryResponseDataModel
 import com.rebtel.country.network.ApiService
 import io.reactivex.Flowable
 import javax.inject.Inject
 
 class CountryListVM @Inject constructor(
-    private val sharedPref: SharedPreferences,
     private val apiService: ApiService
 ) {
+
+    val countriesLiveData = MutableLiveData<LiveData<List<CountryResponseDataModel>>>()
+
+    val loadingLiveData = MutableLiveData<Boolean>()
 
     var items: ArrayList<String>
 
@@ -51,4 +56,12 @@ class CountryListVM @Inject constructor(
                     dataRetrieved = true
                 }
             }
+
+    /**
+     * Set a progress dialog visible on the View
+     * @param visible visible or not visible
+     */
+    fun setLoadingVisibility(visible: Boolean) {
+        loadingLiveData.postValue(visible)
+    }
 }

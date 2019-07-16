@@ -225,11 +225,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/di/AppComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/di/AppComponent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/ui/custom/RecyclerSectionItemDecoration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/ui/custom/RecyclerSectionItemDecoration.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/util/Extensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/util/Extensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/ui/country/list/CountryListVM.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/ui/country/list/CountryListVM.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/kotlin/com/rebtel/country/list/CountryFetchTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/kotlin/com/rebtel/country/list/CountryFetchTest.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -250,12 +251,51 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1921">
-              <caret line="119" selection-start-line="119" selection-end-line="119" />
+            <state relative-caret-position="161">
+              <caret line="127" column="77" selection-start-line="127" selection-start-column="77" selection-end-line="127" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/ui/country/list/CountryListVM.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="49" column="43" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="43" />
+              <folding>
+                <element signature="e#44#247#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/ui/country/list/CountryListActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="89" column="59" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/network/ApiService.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/test/kotlin/com/rebtel/country/list/CountryFetchTest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
         </entry>
@@ -305,10 +345,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/util/svg/SvgSoftwareLayerSetter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/data/model/DiffContact.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/data/model/CountryResponseDataModel.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/network/ApiService.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/ui/country/list/CountryListAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/data/model/ListRow.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/data/model/ResponseDataModel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_country_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/ui/country/list/AlphabeticalAdapter.kt" />
@@ -329,24 +367,26 @@
         <option value="$PROJECT_DIR$/app/src/androidTest/kotlin/com/rebtel/country/ui/splash/CountryDetailViewUITest.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/data/local/SharedPref.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/data/local/LocalDataSource.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/ui/country/list/CountryListVM.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/base/BaseActivity.kt" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/test/kotlin/com/rebtel/country/list/CountryFetchTest.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/app/App.kt" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/ui/country/list/CountryListActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/di/AppComponent.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/ui/custom/RecyclerSectionItemDecoration.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/util/Extensions.kt" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/data/model/ResponseDataModel.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/ui/country/list/CountryListActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/ui/country/list/CountryListVM.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/rebtel/country/network/ApiService.kt" />
+        <option value="$PROJECT_DIR$/app/src/test/kotlin/com/rebtel/country/list/CountryFetchTest.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
-    <option name="width" value="1944" />
-    <option name="height" value="1044" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="1943" />
+    <option name="height" value="1043" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -354,6 +394,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -598,7 +639,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -646,23 +686,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android App.app">
-    <configuration name="CountryFetchTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.rebtel.country.list.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.rebtel.country.list" />
-      <option name="MAIN_CLASS_NAME" value="com.rebtel.country.list.CountryFetchTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -723,11 +747,6 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Android JUnit.CountryFetchTest" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -743,43 +762,44 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CountryListUITest - 2019.07.14 at 02h 22m 16s.xml">
-      <configuration name="CountryListUITest" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="CountryFetchTest_testFetchCountryList - 2019.07.15 at 16h 46m 20s.xml">
+      <configuration name="CountryFetchTest.testFetchCountryList" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="CountryListUITest - 2019.07.14 at 02h 22m 32s.xml">
-      <configuration name="CountryListUITest" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="CountryFetchTest_testFetchCountryList - 2019.07.15 at 16h 46m 33s.xml">
+      <configuration name="CountryFetchTest.testFetchCountryList" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="countryListUITest() - 2019.07.14 at 02h 22m 53s.xml">
-      <configuration name="countryListUITest()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="CountryFetchTest_testFetchCountryList - 2019.07.15 at 16h 47m 03s.xml">
+      <configuration name="CountryFetchTest.testFetchCountryList" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="CountryFetchTest - 2019.07.14 at 10h 42m 56s.xml">
-      <configuration name="CountryFetchTest" configurationId="AndroidJUnit" />
+    <history-entry file="CountryFetchTest_testFetchCountryList - 2019.07.15 at 16h 47m 50s.xml">
+      <configuration name="CountryFetchTest.testFetchCountryList" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="CountryFetchTest - 2019.07.14 at 10h 45m 02s.xml">
-      <configuration name="CountryFetchTest" configurationId="AndroidJUnit" />
+    <history-entry file="CountryFetchTest_fetchRepositories_error - 2019.07.15 at 16h 48m 57s.xml">
+      <configuration name="CountryFetchTest.fetchRepositories_error" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="CountryFetchTest - 2019.07.14 at 10h 48m 10s.xml">
-      <configuration name="CountryFetchTest" configurationId="AndroidJUnit" />
+    <history-entry file="CountryFetchTest_setLoadingVisibility_onNoData - 2019.07.15 at 16h 49m 09s.xml">
+      <configuration name="CountryFetchTest.setLoadingVisibility_onNoData" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="CountryFetchTest - 2019.07.14 at 10h 57m 15s.xml">
-      <configuration name="CountryFetchTest" configurationId="AndroidJUnit" />
+    <history-entry file="CountryFetchTest_testFetchCountryList - 2019.07.15 at 16h 50m 59s.xml">
+      <configuration name="CountryFetchTest.testFetchCountryList" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="CountryFetchTest - 2019.07.14 at 10h 58m 50s.xml">
-      <configuration name="CountryFetchTest" configurationId="AndroidJUnit" />
+    <history-entry file="CountryFetchTest_testFetchCountryList - 2019.07.15 at 16h 53m 07s.xml">
+      <configuration name="CountryFetchTest.testFetchCountryList" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="CountryFetchTest - 2019.07.14 at 10h 59m 02s.xml">
-      <configuration name="CountryFetchTest" configurationId="AndroidJUnit" />
+    <history-entry file="CountryFetchTest_testFetchCountryList - 2019.07.15 at 16h 53m 28s.xml">
+      <configuration name="CountryFetchTest.testFetchCountryList" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="CountryFetchTest - 2019.07.14 at 10h 59m 20s.xml">
-      <configuration name="CountryFetchTest" configurationId="AndroidJUnit" />
+    <history-entry file="CountryFetchTest_testFetchCountryList - 2019.07.15 at 16h 53m 40s.xml">
+      <configuration name="CountryFetchTest.testFetchCountryList" configurationId="AndroidJUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" show_stripe_button="false" sideWeight="0.5026455" side_tool="true" weight="0.17975709" />
       <window_info id="Capture Tool" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49417248" visible="true" weight="0.20809716" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49417248" visible="true" weight="0.1369936" />
       <window_info id="Structure" order="3" show_stripe_button="false" sideWeight="0.5026455" side_tool="true" weight="0.17975709" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Build Variants" order="5" sideWeight="0.5058275" side_tool="true" weight="0.20809716" />
@@ -791,9 +811,9 @@
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.50040483" side_tool="true" weight="0.23801066" />
       <window_info anchor="bottom" id="Version Control" order="4" />
-      <window_info anchor="bottom" id="Build" order="5" visible="true" weight="0.23801066" />
+      <window_info anchor="bottom" id="Build" order="5" weight="0.14517877" />
       <window_info anchor="bottom" id="Android Profiler" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.3285968" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.32827735" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.41740674" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.3285968" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -828,14 +848,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/data/remote/CountryListResponse.kt" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.0.0/2151d26c3b241f0a887f2dadb9ab091649fcf020/recyclerview-1.0.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="10935" column="25" selection-start-line="10935" selection-start-column="25" selection-end-line="10935" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/dataBindingGenBaseClassesDebug/out/com/rebtel/country/databinding/ActivityCountryListBinding.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/util/svg/SvgDecoder.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/util/svg/SvgDrawableTranscoder.java" />
@@ -945,13 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/data/model/ResponseDataModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/test/java/com/rebtel/country/list/CountryListUnitTest.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1016,33 +1021,6 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/kotlin/com/rebtel/country/list/CountryFetchTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding>
-            <element signature="e#33#458#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/ui/country/list/CountryListActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="116" column="88" selection-start-line="116" selection-start-column="88" selection-end-line="116" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/ui/country/list/CountryListVM.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#44#247#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/app/App.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1067,13 +1045,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/rebtel/country/BuildConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/rebtel/country/BuildConfig.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/di/AppModule.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -1085,13 +1057,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/network/ApiService.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -1123,13 +1088,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/util/Extensions.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -1138,10 +1096,69 @@
       </provider>
       <provider editor-type-id="android-manifest" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1921">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        <state relative-caret-position="161">
+          <caret line="127" column="77" selection-start-line="127" selection-start-column="77" selection-end-line="127" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/junit/framework/Assert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+          <folding>
+            <element signature="e#2268#2269#0" expanded="true" />
+            <element signature="e#2320#2321#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/util/Extensions.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/data/model/ResponseDataModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/network/ApiService.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/ui/country/list/CountryListVM.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="49" column="43" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="43" />
+          <folding>
+            <element signature="e#44#247#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rebtel/country/ui/country/list/CountryListActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="89" column="59" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/test/kotlin/com/rebtel/country/list/CountryFetchTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>
